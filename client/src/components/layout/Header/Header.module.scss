@@ -1,0 +1,14 @@
+@import '../../../styles/settings.scss';
+
+.logo {
+  border: 0.2rem solid #fff;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $coffeepot-dark-color,
+    0 0 0.8rem $rosewater-color, 0 0 2.8rem $rosewater-color,
+    inset 0 0 1.3rem $rosewater-color;
+}
+
+img {
+  max-height: 150px;
+  max-width: 100%;
+}
