@@ -1,0 +1,21 @@
+@import '../../../../styles/settings.scss';
+
+.text {
+  text-align: center;
+  line-height: 35px;
+  font-family: 'Noto Serif Telugu', serif;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.button {
+  background-color: $rosewater-color;
+  border: none;
+}
+
+.button:hover {
+  background-color: $coffeepot-dark-color;
+}
