@@ -1,26 +1,26 @@
 @import '../../../styles/settings.scss';
 
-.text {
-  text-align: center;
-  line-height: 35px;
-  font-family: 'Noto Serif Telugu', serif;
-}
-.link {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-}
+.articles {
+  .text {
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Noto Serif Telugu', serif;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  img:hover {
+    transition: all 1s;
+    transform: scale(1.1, 1.1);
+  }
+  .button {
+    background-color: $rosewater-color;
+    border: none;
+  }
 
-.button {
-  background-color: $rosewater-color !important;
-  border: none !important;
-}
-
-.button:hover {
-  background-color: $coffeepot-dark-color !important;
-}
-
-img:hover {
-  transition: all 1s;
-  transform: scale(1.1, 1.1);
+  .button:hover {
+    background-color: $coffeepot-dark-color;
+  }
 }

@@ -9,7 +9,7 @@ const Articles = () => {
 
   return (
     <section className="mt-3 mb-3 d-flex justify-content-center">
-      <Row className="mt-5 mb-5">
+      <Row className={`"mt-5 mb-5" ${styles.articles}`}>
         {articles.map((article, index) => (
           <Col key={index}>
             <Card style={{ width: '22rem' }}>
