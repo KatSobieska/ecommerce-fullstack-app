@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Cart from './components/features/Cart/Cart';
 import Footer from './components/layout/Footer/Footer';
 import Header from './components/layout/Header/Header';
+import Article from './components/pages/Article/Article';
 import Homepage from './components/pages/Homepage/Homepage';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/:articleId" element={<Article />} />
         </Routes>
         <Footer />
       </Container>
