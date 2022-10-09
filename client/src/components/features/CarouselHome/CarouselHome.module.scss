@@ -1,0 +1,18 @@
+@import '../../../styles/settings.scss';
+
+.carousel {
+  margin-top: 20px;
+  height: 400px;
+
+  img {
+    object-fit: contain;
+    max-height: 100%;
+    opacity: 0.5;
+  }
+
+  .caption {
+    font-family: $font-family;
+    opacity: 0.6;
+    color: $coffeepot-dark-color;
+  }
+}
