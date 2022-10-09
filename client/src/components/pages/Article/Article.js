@@ -17,7 +17,7 @@ const Article = () => {
               <Card.Img
                 src={`/images/${articleData.image}`}
                 className="mb-4"
-                style={{ height: '30rem', width: '30rem', objectFit: 'cover' }}
+                style={{ height: '15rem', objectFit: 'cover' }}
               />
               <Card.Text className={styles.text}>
                 <b>Description: </b>
