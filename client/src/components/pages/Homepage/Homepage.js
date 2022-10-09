@@ -1,4 +1,4 @@
-import Articles from '../../features/Cart/Articles/Articles';
+import Articles from '../../features/Articles/Articles';
 
 const Homepage = () => {
   return <Articles />;
