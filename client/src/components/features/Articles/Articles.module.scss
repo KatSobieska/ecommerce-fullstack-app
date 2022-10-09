@@ -12,10 +12,15 @@
 }
 
 .button {
-  background-color: $rosewater-color;
-  border: none;
+  background-color: $rosewater-color !important;
+  border: none !important;
 }
 
 .button:hover {
-  background-color: $coffeepot-dark-color;
+  background-color: $coffeepot-dark-color !important;
+}
+
+img:hover {
+  transition: all 1s;
+  transform: scale(1.1, 1.1);
 }
