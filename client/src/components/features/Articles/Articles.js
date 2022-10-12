@@ -8,7 +8,10 @@ const Articles = () => {
   const articles = useSelector(getAllArticles);
 
   return (
-    <section className="mt-3 mb-3 d-flex justify-content-center">
+    <section className={`${styles.header} "mt-5 mb-5 "`}>
+      <Row className="mt-5 mb-3 d-flex justify-content-center">
+        Read more about jewellery...
+      </Row>
       <Row className={`"mt-5 mb-5" ${styles.articles}`}>
         {articles.map((article, index) => (
           <Col key={index}>
@@ -22,7 +25,7 @@ const Articles = () => {
                 <Card.Text className={styles.text}>
                   {article.descriptionShort}
                 </Card.Text>
-                <Link className={styles.link} to={'/' + article.id}>
+                <Link className={styles.link} to={'/articles/' + article.id}>
                   <Button className={styles.button}>Read more..</Button>
                 </Link>
               </Card.Body>
