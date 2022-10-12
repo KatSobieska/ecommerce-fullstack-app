@@ -1,0 +1,10 @@
+@import './settings.scss';
+
+.button {
+  background-color: $rosewater-color !important;
+  border: none !important;
+}
+
+.button:hover {
+  background-color: $coffeepot-dark-color !important;
+}
