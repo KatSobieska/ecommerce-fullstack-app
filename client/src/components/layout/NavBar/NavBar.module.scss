@@ -2,6 +2,12 @@
 
 .navbar {
   font-family: $font-family;
-  font-size: $font-size;
-  background: linear-gradient(#ffffff, $dustyrose-color);
+  font-size: $font-size/1.2;
+  background: linear-gradient($dustyrose-color, #ffffff);
+  height: 60px;
+  background-color: white;
+
+  .nav {
+    background: linear-gradient($dustyrose-color, #ffffff);
+  }
 }
