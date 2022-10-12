@@ -1,11 +1,15 @@
 import articlesReducer from './articlesRedux';
 import adsReducer from './adsRedux';
+import categoriesReducer from './categoriesRedux';
+import productsReducer from './productsRedux';
 import { combineReducers, createStore } from 'redux';
 import initialState from './initialState';
 
 const reducers = {
   articles: articlesReducer,
   ads: adsReducer,
+  categories: categoriesReducer,
+  products: productsReducer,
 };
 
 const combinedReducers = combineReducers(reducers);
