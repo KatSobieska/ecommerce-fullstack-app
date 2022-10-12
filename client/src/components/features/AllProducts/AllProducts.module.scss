@@ -1,0 +1,23 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+}
+
+.productName {
+  display: flex;
+  justify-content: center;
+  color: $coffeepot-dark-color;
+}
+
+.category {
+  color: $rosewater-color;
+}
