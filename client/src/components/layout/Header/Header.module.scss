@@ -1,14 +1,18 @@
 @import '../../../styles/settings.scss';
 
 .logo {
-  border: 0.2rem solid #fff;
-  padding: 0.4em;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem $coffeepot-dark-color,
-    0 0 0.8rem $rosewater-color, 0 0 2.8rem $rosewater-color,
-    inset 0 0 1.3rem $rosewater-color;
+  box-shadow: 0 0 0rem #fff, 0 0 0rem #fff, 0 0 1rem $rosewater-color,
+    0 0 0.8rem $rosewater-color, 0 0 1.5rem $rosewater-color,
+    inset 0 0 1rem $rosewater-color;
+
+  .nav:hover {
+    border-bottom: 1px solid $dustyrose-color;
+  }
 
   img {
-    max-height: 150px;
+    max-height: 170px;
     max-width: 100%;
+    display: flex;
+    padding: 12px 0 12px 0;
   }
 }
