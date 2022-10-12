@@ -1,24 +1,39 @@
-import { Card, Col, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getArticleById } from '../../../redux/articlesRedux';
 import styles from './Article.module.scss';
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
 
 const Article = () => {
   const { articleId } = useParams();
   const articleData = useSelector((state) => getArticleById(state, articleId));
+  console.log('articleData', articleData);
 
   return (
-    <section className="d-flex justify-content-center">
-      <Row className="mt-5 mb-5">
-        <Col>
-          <Card style={{ width: '22rem' }}>
+    <section className={styles.article}>
+      <Row className="mt-5 d-flex justify-content-start">
+        <Col xl={4}>
+          <Card
+            style={{
+              width: '22rem',
+              height: '18rem',
+              border: 'none',
+            }}
+          >
             <Card.Body className="">
               <Card.Img
                 src={`/images/${articleData.image}`}
                 className="mb-4"
                 style={{ height: '15rem', objectFit: 'cover' }}
               />
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xl={8}>
+          <Card style={{ height: '18rem', border: 'none' }}>
+            <Card.Body>
               <Card.Text className={styles.text}>
                 <b>Description: </b>
                 {articleData.descriptionLong}
@@ -26,6 +41,16 @@ const Article = () => {
               <Card.Text className={styles.text}>
                 <b>Author:</b> {articleData.author}
               </Card.Text>
+              <Row>
+                <Link className={styles.link} to={'/'}>
+                  <Button className={styles.button}>
+                    <FontAwesomeIcon
+                      icon={faArrowAltCircleLeft}
+                    ></FontAwesomeIcon>
+                    Back
+                  </Button>
+                </Link>
+              </Row>
             </Card.Body>
           </Card>
         </Col>

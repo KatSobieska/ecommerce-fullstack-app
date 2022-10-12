@@ -1,7 +1,18 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
 .text {
   text-align: center;
   line-height: 35px;
-  font-family: 'Noto Serif Telugu', serif;
+  font-family: $font-article;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.article {
+  margin-bottom: 184px;
 }
