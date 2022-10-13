@@ -1,0 +1,25 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.cart {
+  font-family: $font-family;
+  font-size: $font-size/1.5;
+  display: flex;
+  justify-content: center;
+
+  .description {
+    text-align: center;
+    font-size: $font-size/1.8;
+  }
+
+  .category {
+    color: $rosewater-color;
+    margin-left: 5px;
+  }
+}
