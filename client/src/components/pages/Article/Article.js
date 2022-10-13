@@ -26,7 +26,11 @@ const Article = () => {
               <Card.Img
                 src={`/images/${articleData.image}`}
                 className="mb-4"
-                style={{ height: '15rem', objectFit: 'cover' }}
+                style={{
+                  height: '15rem',
+                  objectFit: 'cover',
+                  borderRadius: '0',
+                }}
               />
             </Card.Body>
           </Card>
@@ -34,8 +38,10 @@ const Article = () => {
         <Col xl={8}>
           <Card style={{ height: '18rem', border: 'none' }}>
             <Card.Body>
+              <Card.Text className={styles.title}>
+                {articleData.title}
+              </Card.Text>
               <Card.Text className={styles.text}>
-                <b>Description: </b>
                 {articleData.descriptionLong}
               </Card.Text>
               <Card.Text className={styles.text}>

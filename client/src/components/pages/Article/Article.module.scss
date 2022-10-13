@@ -7,6 +7,13 @@
   font-family: $font-article;
 }
 
+.title {
+  text-align: center;
+  line-height: 35px;
+  font-family: $font-article;
+  font-size: $font-size;
+}
+
 .link {
   display: flex;
   justify-content: center;
@@ -14,5 +21,5 @@
 }
 
 .article {
-  margin-bottom: 184px;
+  margin-bottom: 196px;
 }
