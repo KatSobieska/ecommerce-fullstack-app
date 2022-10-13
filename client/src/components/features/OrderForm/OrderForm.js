@@ -1,6 +1,7 @@
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import styles from './OrderForm.module.scss';
 import { useForm } from 'react-hook-form';
+import OrderSummary from '../OrderSummary/OrderSummary';
 
 const OrderForm = () => {
   const handleSubmit = (e) => {
@@ -14,12 +15,12 @@ const OrderForm = () => {
   } = useForm();
   return (
     <Container>
-      <Row>
-        <Col>
+      <Row className="mb-3">
+        <Col className="d-flex justify-content-end">
           <Form
             onSubmit={validate(handleSubmit)}
             style={{ width: '30rem' }}
-            className="m-3"
+            className={`m-3 ${styles.form}`}
           >
             <Form.Group>
               <Row>
@@ -128,8 +129,8 @@ const OrderForm = () => {
             </Button>
           </Form>
         </Col>
-        <Col className="justify-content-center">
-          <>Order Summary</>
+        <Col className="d-flex justify-content-end">
+          <OrderSummary />
         </Col>
       </Row>
     </Container>

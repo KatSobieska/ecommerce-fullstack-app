@@ -1,0 +1,15 @@
+@import '../../../styles/global.scss';
+
+.summary {
+  background: $dustyrose-color;
+  width: 325px;
+
+  font-family: $font-family;
+  font-size: $font-size/1.6;
+  opacity: 0.8;
+
+  .line {
+    border-bottom: 1px solid $rosewater-color;
+    width: 300px;
+  }
+}
