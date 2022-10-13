@@ -1,0 +1,9 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.formLogin {
+  margin-bottom: 228px;
+  .headerLogin {
+    font-family: $font-family;
+  }
+}
