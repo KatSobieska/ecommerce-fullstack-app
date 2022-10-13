@@ -4,6 +4,8 @@
   font-family: $font-family;
   font-size: $font-size;
   color: $coffeepot-dark-color;
+  border-top: 1px solid $dustyrose-color;
+  border-bottom: 1px solid $dustyrose-color;
 
   img:hover {
     transition: all 1s;

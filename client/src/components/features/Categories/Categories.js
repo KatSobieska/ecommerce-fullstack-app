@@ -10,18 +10,22 @@ const Categories = () => {
   return (
     <section className={`${styles.header} "mt-5 mb-5 "`}>
       <Row className="mt-5 mb-3 d-flex justify-content-center">
-        Our products
+        Our collections
       </Row>
       <Row className="mt-3 mb-2">
         {categories.map((category, index) => (
-          <Col key={index}>
-            <Card style={{ width: '19rem' }} className="mt-3">
+          <Col key={index} className="p-0 d-flex justify-content-center">
+            <Card style={{ width: '19rem', border: 'none' }} className="mt-3 ">
+              <Card.Img
+                src={`/images/${category.image}`}
+                className="mb-4"
+                style={{
+                  height: '15rem',
+                  objectFit: 'cover',
+                  borderRadius: '0',
+                }}
+              />
               <Card.Body>
-                <Card.Img
-                  src={`/images/${category.image}`}
-                  className="mb-4"
-                  style={{ height: '10rem', objectFit: 'cover' }}
-                />
                 <Link
                   className={styles.categoryLink}
                   to={'/category/' + category.id}
