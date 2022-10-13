@@ -9,19 +9,23 @@ const Articles = () => {
 
   return (
     <section className={`${styles.header} "mt-5 mb-5 "`}>
-      <Row className="mt-5 mb-3 d-flex justify-content-center">
+      <Row className="mt-5 mb-5 d-flex justify-content-center">
         Read more about jewellery...
       </Row>
       <Row className={`"mt-5 mb-5" ${styles.articles}`}>
         {articles.map((article, index) => (
-          <Col key={index}>
-            <Card style={{ width: '22rem' }}>
+          <Col key={index} className="p-0 d-flex justify-content-center">
+            <Card style={{ width: '22rem', border: 'none' }}>
+              <Card.Img
+                src={`/images/${article.image}`}
+                className="mb-4"
+                style={{
+                  height: '16rem',
+                  objectFit: 'cover',
+                  borderRadius: '0',
+                }}
+              />
               <Card.Body>
-                <Card.Img
-                  src={`/images/${article.image}`}
-                  className="mb-4"
-                  style={{ height: '10rem', objectFit: 'cover' }}
-                />
                 <Card.Text className={styles.text}>
                   {article.descriptionShort}
                 </Card.Text>
