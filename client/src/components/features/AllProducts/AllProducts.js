@@ -9,10 +9,10 @@ import styles from './AllProducts.module.scss';
 const AllProducts = () => {
   const products = useSelector(getAllProducts);
   return (
-    <section className="mt-5 mb-5 ">
+    <section className="mt-5 mb-5">
       <Row>
         <Link className={styles.link} to={'/'}>
-          <Button className={styles.button}>
+          <Button className={` mb-5 ${styles.button}`}>
             <FontAwesomeIcon icon={faArrowAltCircleLeft}></FontAwesomeIcon>Back
           </Button>
         </Link>
@@ -20,20 +20,23 @@ const AllProducts = () => {
       <Row>
         {products.map((product, index) => (
           <Col key={index}>
-            <Card style={{ width: '18rem' }} className="mt-2 mb-2">
+            <Card
+              style={{ width: '18rem', borderRadius: '0' }}
+              className="mt-2 mb-2"
+            >
+              <Card.Img
+                src={`/images/${product.image}`}
+                style={{ height: '10rem', objectFit: 'cover' }}
+              />
+              <Card.Text className={styles.category}>
+                {product.category}
+              </Card.Text>
               <Card.Body>
-                <Card.Img
-                  src={`/images/${product.image}`}
-                  style={{ height: '10rem', objectFit: 'cover' }}
-                />
-                <Card.Text className={styles.category}>
-                  {product.category}
-                </Card.Text>
                 <Card.Text className={styles.productName}>
                   {product.name}
                 </Card.Text>
                 <Card.Text className={styles.price}>{product.price}</Card.Text>
-                <Link className={styles.link} to={'/'}>
+                <Link className={styles.link} to={'/' + product.id}>
                   <Button className={styles.button}>Check details</Button>
                 </Link>
               </Card.Body>
