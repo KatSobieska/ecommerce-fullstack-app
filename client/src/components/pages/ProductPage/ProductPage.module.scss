@@ -1,0 +1,23 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
+
+.root {
+  height: 436px;
+  font-family: $font-family;
+  color: $coffeepot-dark-color;
+
+  .photo {
+    border-right: 1px solid $dustyrose-color;
+  }
+  .text {
+    font-size: $font-size;
+  }
+  .price {
+    font-size: $font-size/1.6;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+}
