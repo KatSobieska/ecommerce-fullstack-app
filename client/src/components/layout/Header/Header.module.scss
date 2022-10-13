@@ -1,18 +1,12 @@
 @import '../../../styles/settings.scss';
 
-.logo {
-  box-shadow: 0 0 0rem #fff, 0 0 0rem #fff, 0 0 1rem $rosewater-color,
-    0 0 0.8rem $rosewater-color, 0 0 1.5rem $rosewater-color,
-    inset 0 0 1rem $rosewater-color;
-
-  .nav:hover {
+.background {
+  background: linear-gradient($dustyrose-color, #ffffff);
+  .logo {
+    font-family: $font-family;
+    font-size: $font-size/1.8;
+    text-transform: uppercase;
+    height: 70px;
     border-bottom: 1px solid $dustyrose-color;
-  }
-
-  img {
-    max-height: 170px;
-    max-width: 100%;
-    display: flex;
-    padding: 12px 0 12px 0;
   }
 }

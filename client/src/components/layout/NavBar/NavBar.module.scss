@@ -1,13 +1,21 @@
 @import '../../../styles/settings.scss';
 
 .navbar {
+  margin-top: 20px;
   font-family: $font-family;
   font-size: $font-size/1.2;
-  background: linear-gradient($dustyrose-color, #ffffff);
-  height: 60px;
   background-color: white;
 
-  .nav {
-    background: linear-gradient($dustyrose-color, #ffffff);
+  img {
+    max-height: 80px;
+  }
+
+  .cartQuantity {
+    width: 35px;
+    height: 35px;
+    text-align: none;
+    color: white;
+    background-color: $dustyrose-color;
+    border-radius: 50%;
   }
 }
