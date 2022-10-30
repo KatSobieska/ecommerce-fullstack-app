@@ -1,39 +1,41 @@
-import { Alert, Form, Button, Spinner } from 'react-bootstrap';
-import { useState } from 'react';
-import styles from './Login.module.scss';
-import { useDispatch } from 'react-redux';
+import { Alert, Form, Button, Spinner } from "react-bootstrap";
+import { useState } from "react";
+import styles from "./Login.module.scss";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../../redux/usersRedux";
+import { API_URL } from "../../../config";
 
 const Login = () => {
-  const [login, setLogin] = useState('');
-  const [password, setPassword] = useState('');
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
   const [status, setStatus] = useState(null);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // const options = {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   credentials: 'include',
-    //   body: JSON.stringify({ login, password }),
-    // };
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ login, password }),
+    };
 
-    // setStatus('loading');
-    // fetch(`${API_URL}/auth/login`, options)
-    //   .then((res) => {
-    //     if (res.status === 200) {
-    //       setStatus('success');
-    //       dispatch(logIn({ login }));
-    //     } else if (res.status === 400) {
-    //       setStatus('clientError');
-    //     } else {
-    //       setStatus('serverError');
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     setStatus('serverError');
-    //   });
+    setStatus("loading");
+    fetch(`${API_URL}/auth/login`, options)
+      .then((res) => {
+        if (res.status === 200) {
+          setStatus("success");
+          dispatch(logIn({ login }));
+        } else if (res.status === 400) {
+          setStatus("clientError");
+        } else {
+          setStatus("serverError");
+        }
+      })
+      .catch((err) => {
+        setStatus("serverError");
+      });
   };
 
   return (
@@ -43,28 +45,28 @@ const Login = () => {
     >
       <h1 className={`my-4 ${styles.headerLogin}`}>Login</h1>
 
-      {status === 'success' && (
+      {status === "success" && (
         <Alert variant="success">
           <Alert.Heading>Success!</Alert.Heading>
           <p>You have been succesfully logged in!</p>
         </Alert>
       )}
 
-      {status === 'serverError' && (
+      {status === "serverError" && (
         <Alert variant="danger">
           <Alert.Heading>Something went wrong...</Alert.Heading>
           <p>Unexpected error... Try again!</p>
         </Alert>
       )}
 
-      {status === 'clientError' && (
+      {status === "clientError" && (
         <Alert variant="danger">
           <Alert.Heading>Incorrect data</Alert.Heading>
           <p>Login or password are incorrect...</p>
         </Alert>
       )}
 
-      {status === 'loading' && (
+      {status === "loading" && (
         <Spinner animation="border" role="status" className="d-block mx-auto">
           <span className="visually-hidden">Loading...</span>
         </Spinner>
