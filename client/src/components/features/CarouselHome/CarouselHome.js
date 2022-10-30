@@ -1,10 +1,17 @@
-import { Carousel } from 'react-bootstrap/';
-import { useSelector } from 'react-redux';
-import { getAllAds } from '../../../redux/adsRedux';
-import styles from './CarouselHome.module.scss';
+import { useEffect } from "react";
+import { Carousel } from "react-bootstrap/";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllAds, loadAdsRequest } from "../../../redux/adsRedux";
+import styles from "./CarouselHome.module.scss";
 
 const CarouselHome = () => {
   const adsData = useSelector(getAllAds);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadAdsRequest());
+  }, [dispatch]);
+
   return (
     <Carousel
       className={styles.carousel}
