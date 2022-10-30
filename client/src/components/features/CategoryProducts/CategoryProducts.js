@@ -1,22 +1,33 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
-import { Button, Card, Col, Row } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
-import { getProductByCategory } from '../../../redux/productsRedux';
-import styles from './CategoryProducts.module.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons";
+import { Button, Card, Col, Row } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import {
+  getProductByCategory,
+  loadProductsRequest,
+} from "../../../redux/productsRedux";
+import styles from "./CategoryProducts.module.scss";
+import { useEffect } from "react";
 
 const CategoryProducts = () => {
   const { category } = useParams();
   const productDataByCategory = useSelector((state) =>
-    getProductByCategory(state, category),
+    getProductByCategory(state, category)
   );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadProductsRequest());
+  }, [dispatch]);
+
+  console.log("productDataByCategory", productDataByCategory);
 
   return (
     <section className="mt-5 mb-5">
       <Row>
-        <Link className={styles.link} to={'/'}>
+        <Link className={styles.link} to={"/"}>
           <Button className={`mb-2 ${styles.button}`}>
             <FontAwesomeIcon icon={faArrowAltCircleLeft}></FontAwesomeIcon>Back
           </Button>
@@ -26,15 +37,15 @@ const CategoryProducts = () => {
         {productDataByCategory.map((product, index) => (
           <Col xl={3} key={index} className="d-flex justify-content-center">
             <Card
-              style={{ width: '18rem', borderRadius: '0' }}
+              style={{ width: "18rem", borderRadius: "0" }}
               className={`mt-3  ${styles.cart}`}
             >
               <Card.Img
                 src={`/images/${product.image}`}
                 style={{
-                  height: '15rem',
-                  objectFit: 'cover',
-                  borderRadius: '0',
+                  height: "15rem",
+                  objectFit: "cover",
+                  borderRadius: "0",
                 }}
               />
               <Card.Text className={styles.category}>
@@ -51,7 +62,7 @@ const CategoryProducts = () => {
                   <b>Description: </b>
                   {product.descriptionShort}
                 </Card.Text>
-                <Link className={styles.link} to={'/' + product.id}>
+                <Link className={styles.link} to={"/products/" + product._id}>
                   <Button className={styles.button}>Check details</Button>
                 </Link>
               </Card.Body>
