@@ -10,13 +10,13 @@ const NODE_ENV = process.env.NODE_ENV;
 const EMC_USERNAME = process.env.EMC_USERNAME;
 const EMC_PASSWORD = process.env.EMC_PASSWORD;
 
-let dbUri = "";
+let dbUri = `mongodb+srv://${EMC_USERNAME}:${EMC_PASSWORD}@cluster0.ii8kz.mongodb.net/?retryWrites=true&w=majority`;
 
-if (NODE_ENV === "production")
-  dbUri = `mongodb+srv://${EMC_USERNAME}:${EMC_PASSWORD}@cluster0.ii8kz.mongodb.net/?retryWrites=true&w=majority`;
-else if (NODE_ENV === "test")
-  dbUri = "mongodb://localhost:27017/ecommerceDBtest";
-else dbUri = "mongodb://localhost:27017/ecommerceDB";
+// if (NODE_ENV === "production")
+//   dbUri = `mongodb+srv://${EMC_USERNAME}:${EMC_PASSWORD}@cluster0.ii8kz.mongodb.net/?retryWrites=true&w=majority`;
+// else if (NODE_ENV === "test")
+//   dbUri = "mongodb://localhost:27017/ecommerceDBtest";
+// else dbUri = "mongodb://localhost:27017/ecommerceDB";
 
 const app = express();
 
