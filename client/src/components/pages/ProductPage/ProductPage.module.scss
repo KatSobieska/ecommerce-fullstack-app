@@ -20,4 +20,12 @@
     justify-content: center;
     text-decoration: none;
   }
+  .count {
+    color: $coffeepot-dark-color;
+  }
+
+  .countSpan {
+    margin-right: 5px;
+    font-weight: bold;
+  }
 }
