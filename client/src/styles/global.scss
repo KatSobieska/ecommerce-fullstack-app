@@ -1,4 +1,4 @@
-@import './settings.scss';
+@import "./settings.scss";
 
 .button {
   background-color: $rosewater-color !important;
@@ -6,5 +6,13 @@
 }
 
 .button:hover {
+  background-color: $coffeepot-dark-color !important;
+}
+
+.buttonRemove {
+  background-color: $coffeepot-dark-color;
+  border: none !important;
+}
+.buttonRemove:hover {
   background-color: $coffeepot-dark-color !important;
 }
