@@ -1,12 +1,11 @@
-@import '../../../styles/global.scss';
+@import "../../../styles/global.scss";
 
 .summary {
   background: $dustyrose-color;
+  opacity: 0.7;
   width: 325px;
-
   font-family: $font-family;
   font-size: $font-size/1.6;
-  opacity: 0.8;
 
   .line {
     border-bottom: 1px solid $rosewater-color;
