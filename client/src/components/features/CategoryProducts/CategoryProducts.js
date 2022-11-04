@@ -22,8 +22,6 @@ const CategoryProducts = () => {
     dispatch(loadProductsRequest());
   }, [dispatch]);
 
-  console.log("productDataByCategory", productDataByCategory);
-
   return (
     <section className="mt-5 mb-5">
       <Row>
@@ -56,7 +54,7 @@ const CategoryProducts = () => {
                   {product.name}
                 </Card.Text>
                 <Card.Text className="d-flex justify-content-center">
-                  {product.price}
+                  {product.price} $
                 </Card.Text>
                 <Card.Text className={styles.description}>
                   <b>Description: </b>
