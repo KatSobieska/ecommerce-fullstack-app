@@ -43,6 +43,11 @@ const Login = () => {
       className={`col-12 col-sm-3 mx-auto ${styles.formLogin}`}
       onSubmit={handleSubmit}
     >
+      <p style={{ fontSize: "19px" }}>
+        <strong>For testing please use:</strong>
+      </p>
+      <p>Login: tester1</p>
+      <p>Password: tester1</p>
       <h1 className={`my-4 ${styles.headerLogin}`}>Login</h1>
 
       {status === "success" && (
