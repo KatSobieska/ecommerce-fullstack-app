@@ -1,9 +1,8 @@
-@import '../../../styles/settings.scss';
-@import '../../../styles/global.scss';
+@import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .root {
   height: 468px;
-  font-family: $font-family;
   color: $coffeepot-dark-color;
 
   .photo {

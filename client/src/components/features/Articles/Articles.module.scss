@@ -1,8 +1,7 @@
-@import '../../../styles/settings.scss';
-@import '../../../styles/global.scss';
+@import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .header {
-  font-family: $font-family;
   font-size: $font-size;
   color: $coffeepot-dark-color;
 
@@ -10,7 +9,6 @@
     .text {
       text-align: center;
       line-height: 35px;
-      font-family: $font-article;
       font-size: $font-size/1.6;
     }
     .link {

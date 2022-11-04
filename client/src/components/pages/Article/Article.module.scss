@@ -1,16 +1,14 @@
-@import '../../../styles/settings.scss';
-@import '../../../styles/global.scss';
+@import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .text {
   text-align: center;
   line-height: 35px;
-  font-family: $font-article;
 }
 
 .title {
   text-align: center;
   line-height: 35px;
-  font-family: $font-article;
   font-size: $font-size;
 }
 
