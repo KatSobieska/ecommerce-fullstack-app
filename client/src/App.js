@@ -11,6 +11,7 @@ import NavBar from "./components/layout/NavBar/NavBar";
 import Article from "./components/pages/Article/Article";
 import Homepage from "./components/pages/Homepage/Homepage";
 import Login from "./components/pages/Login/Login";
+import Logout from "./components/pages/Logout/Logout";
 import ProductPage from "./components/pages/ProductPage/ProductPage";
 import Register from "./components/pages/Register/Register";
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/products/:id" element={<ProductPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/logout" element={<Logout />} />
           </Routes>
         </ScrollToTop>
       </Container>
