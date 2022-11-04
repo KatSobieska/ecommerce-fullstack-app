@@ -1,10 +1,10 @@
 export const getUser = ({ user }) => user;
 
-const reducerName = 'users';
+const reducerName = "users";
 const createActionName = (name) => `app/${reducerName}/${name}`;
 
-const LOG_IN = createActionName('LOG_IN');
-const LOG_OUT = createActionName('LOG_OUT');
+const LOG_IN = createActionName("LOG_IN");
+const LOG_OUT = createActionName("LOG_OUT");
 
 export const logIn = (payload) => ({ type: LOG_IN, payload });
 export const logOut = (payload) => ({ type: LOG_OUT, payload });
