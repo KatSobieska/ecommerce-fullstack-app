@@ -5,12 +5,18 @@
   height: 350px;
 
   img {
-    max-height: 100%;
     opacity: 0.5;
   }
 
   .caption {
     opacity: 0.6;
     color: $coffeepot-dark-color;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel {
+    margin: 15px 0 60px 0;
+    height: 260px;
   }
 }
