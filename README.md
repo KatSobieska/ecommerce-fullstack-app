@@ -20,5 +20,6 @@ npm start
 
 ```
 
-Author: [Katarzyna Sobieska](https://www.linkedin.com/in/katarzyna-sobieska/)
+Author: Katarzyna Sobieska
+https://www.linkedin.com/in/katarzyna-sobieska/
 ```
