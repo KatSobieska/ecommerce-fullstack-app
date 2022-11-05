@@ -20,5 +20,5 @@ npm start
 
 ```
 
-Author: [Katarzyna Sobieska](https://www.linkedin.com/in/katarzyna-sobieska/)
+Author: This site was built using [GitHub Pages](https://pages.github.com/).
 ```
