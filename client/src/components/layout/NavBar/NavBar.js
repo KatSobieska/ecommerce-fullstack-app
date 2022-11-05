@@ -52,7 +52,7 @@ const NavBar = () => {
       <Col>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className={`px-2 my-2 my-lg-0 `}>
+          <Nav className={`px-0 my-3 my-lg-0 `}>
             <Form className="d-flex align-items-center">
               <Form.Control
                 type="search"
